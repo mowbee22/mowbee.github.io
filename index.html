@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Mowbarnikaa | Portfolio</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Poppins',sans-serif;
+}
+
+body{
+background:#0f172a;
+color:white;
+}
+
+/* HEADER */
+
+header{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+text-align:center;
+}
+
+header h1{
+font-size:50px;
+color:#38bdf8;
+}
+
+header p{
+margin-top:10px;
+font-size:20px;
+}
+
+.btn{
+margin-top:25px;
+padding:10px 20px;
+background:#38bdf8;
+color:black;
+border:none;
+border-radius:5px;
+cursor:pointer;
+}
+
+/* SECTION */
+
+section{
+padding:60px 10%;
+}
+
+h2{
+margin-bottom:25px;
+border-left:4px solid #38bdf8;
+padding-left:10px;
+}
+
+/* GRID */
+
+.grid{
+display:grid;
+grid-template-columns:1fr 1fr;
+gap:40px;
+}
+
+/* SKILLS */
+
+.skill{
+margin-bottom:15px;
+}
+
+.bar{
+background:#1e293b;
+height:8px;
+border-radius:5px;
+}
+
+.fill{
+background:#38bdf8;
+height:8px;
+border-radius:5px;
+}
+
+/* CARD */
+
+.card{
+background:#1e293b;
+padding:20px;
+border-radius:8px;
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+/* FOOTER */
+
+footer{
+text-align:center;
+padding:20px;
+background:#020617;
+margin-top:40px;
+}
+
+@media(max-width:768px){
+
+.grid{
+grid-template-columns:1fr;
+}
+
+header h1{
+font-size:35px;
+}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<header>
+
+<h1>Mowbarnikaa A</h1>
+<p>Mechanical Engineering Student</p>
+
+<a href="#about">
+<button class="btn">Explore Portfolio</button>
+</a>
+
+</header>
+
+<section id="about">
+
+<h2>Profile</h2>
+
+<p>
+A passionate Mechanical Engineering student with strong interest in energy systems,
+leadership and innovative engineering solutions.
+</p>
+
+</section>
+
+<section>
+
+<h2>Education</h2>
+
+<div class="card">
+
+<h3>Bachelor of Engineering</h3>
+
+<p>College of Engineering Guindy – Anna University</p>
+<p>2023 – Present</p>
+<p>CGPA: 7.68 / 10</p>
+
+</div>
+
+<br>
+
+<div class="card">
+
+<h3>Higher Secondary</h3>
+
+<p>Saratha Matric Hr Sec School</p>
+<p>2021 – 2023</p>
+<p>Percentage: 91%</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Skills</h2>
+
+<div class="skill">
+AutoCAD
+<div class="bar">
+<div class="fill" style="width:70%"></div>
+</div>
+</div>
+
+<div class="skill">
+Creo
+<div class="bar">
+<div class="fill" style="width:50%"></div>
+</div>
+</div>
+
+<div class="skill">
+Communication
+<div class="bar">
+<div class="fill" style="width:80%"></div>
+</div>
+</div>
+
+</section>
+
+<section>
+
+<h2>Project</h2>
+
+<div class="card">
+
+<h3>Autogrip 6R</h3>
+
+<p>
+Arduino based 6-Axis robotic gripper system that operates through programmed commands
+and switches between suction gripper and mechanical clamp.
+</p>
+
+</div>
+
+</section>
+
+<section>
+
+<h2>Achievements</h2>
+
+<ul>
+
+<li>Best Volunteer Award – NSS (2023–2024)</li>
+<li>1st Place – Intra College Dance Competition</li>
+<li>2nd Place – Inter Variety Competition (Kilpauk Medical College)</li>
+<li>Winner – Badminton Intra Department Sports Meet</li>
+
+</ul>
+
+</section>
+
+<footer>
+
+<p>© 2026 Mowbarnikaa A</p>
+
+</footer>
+
+</body>
+</html>
