@@ -1,146 +1,63 @@
-<!DOCTYPE html>
+TYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Mowbarnikaa | Portfolio</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+<title>Mowbarnikaa Portfolio</title>
 
 <style>
 
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-scroll-behavior:smooth;
-}
-
 body{
-background:#0f172a;
-color:white;
-transition:0.3s;
-}
-
-.light{
-background:white;
-color:black;
-}
-
-nav{
-display:flex;
-justify-content:space-between;
-padding:20px 10%;
-background:#020617;
-position:sticky;
-top:0;
-}
-
-nav a{
-color:white;
-text-decoration:none;
-margin:0 10px;
+font-family: Arial;
+margin:0;
+background:#f4f4f4;
 }
 
 header{
-height:100vh;
-display:flex;
-flex-direction:column;
-justify-content:center;
-align-items:center;
+background:#2f3e52;
+color:white;
+padding:40px;
 text-align:center;
 }
 
-header img{
-width:140px;
-border-radius:50%;
-margin-bottom:20px;
+.container{
+display:flex;
 }
 
-header h1{
-font-size:45px;
-color:#38bdf8;
+.left{
+width:30%;
+background:#e5e5e5;
+padding:20px;
 }
 
-.btn{
-margin-top:20px;
-padding:10px 20px;
-background:#38bdf8;
-border:none;
-cursor:pointer;
-border-radius:5px;
-}
-
-section{
-padding:60px 10%;
+.right{
+width:70%;
+padding:30px;
+background:white;
 }
 
 h2{
-margin-bottom:20px;
-border-left:4px solid #38bdf8;
-padding-left:10px;
+border-bottom:2px solid #444;
+padding-bottom:5px;
 }
 
-.grid{
-display:grid;
-grid-template-columns:1fr 1fr;
-gap:30px;
-}
-
-.card{
-background:#1e293b;
-padding:20px;
-border-radius:10px;
-transition:0.3s;
-}
-
-.card:hover{
-transform:translateY(-5px);
-}
-
-.skill{
-margin:15px 0;
-}
-
-.bar{
-height:8px;
-background:#334155;
-border-radius:5px;
-}
-
-.fill{
-height:8px;
-background:#38bdf8;
-border-radius:5px;
+ul{
+padding-left:20px;
 }
 
 .contact p{
-margin:8px 0;
+margin:5px 0;
 }
 
-footer{
+.skill{
+margin:5px 0;
+}
+
+.footer{
 text-align:center;
 padding:20px;
-background:#020617;
-}
-
-.toggle{
-cursor:pointer;
-}
-
-@media(max-width:768px){
-
-.grid{
-grid-template-columns:1fr;
-}
-
-header h1{
-font-size:32px;
-}
-
+background:#2f3e52;
+color:white;
 }
 
 </style>
@@ -149,118 +66,105 @@ font-size:32px;
 
 <body>
 
-<nav>
-
-<div><b>Mowbarnikaa</b></div>
-
-<div>
-<a href="#about">About</a>
-<a href="#skills">Skills</a>
-<a href="#projects">Projects</a>
-<a href="#contact">Contact</a>
-<span class="toggle" onclick="mode()">🌙</span>
-</div>
-
-</nav>
-
 <header>
-
-<img src="profile.jpg">
-
-<h1>Mowbarnikaa A</h1>
-
-<p>Mechanical Engineering Student</p>
-
-<a href="resume.pdf" download>
-<button class="btn">Download Resume</button>
-</a>
-
+<h1>MOWBARNIKAA A</h1>
+<p>A Mechanical Engineering Student</p>
 </header>
 
-<section id="about">
+<div class="container">
+
+<div class="left">
+
+<h2>Contact</h2>
+<p>📞 +91 6380057019</p>
+<p>✉ mowbee22@gmail.com</p>
+
+<h2>Soft Skills</h2>
+<ul>
+<li>Team collaboration</li>
+<li>Leadership potential</li>
+<li>Effective communication</li>
+<li>Adaptability</li>
+</ul>
+
+<h2>Hard Skills</h2>
+<ul>
+<li>AutoCAD 2D (Basics)</li>
+<li>Creo (Beginner)</li>
+</ul>
+
+<h2>Languages</h2>
+<ul>
+<li>Tamil (Native)</li>
+<li>English (Proficient)</li>
+</ul>
+
+<h2>Workshops</h2>
+<ul>
+<li>Six Sigma (Yellow Level)</li>
+<li>Industrial mechatronics workshop</li>
+</ul>
+
+</div>
+
+<div class="right">
 
 <h2>Profile</h2>
-
 <p>
-A passionate Mechanical Engineering student with strong interest in energy systems,
-leadership and innovative engineering solutions.
+A passionate Mechanical Engineering student with a strong interest in energy systems.
+Possess strong leadership qualities and a problem-solving mindset.
+Seeking a challenging role to contribute to innovative engineering solutions.
 </p>
 
-</section>
+<h2>Education</h2>
 
-<section id="skills">
+<p><b>Bachelor of Engineering</b><br>
+College of Engineering Guindy - Anna University<br>
+2023 - Present<br>
+CGPA: 7.68 / 10
+</p>
 
-<h2>Skills</h2>
-
-<div class="skill">AutoCAD
-<div class="bar"><div class="fill" style="width:70%"></div></div>
-</div>
-
-<div class="skill">Creo
-<div class="bar"><div class="fill" style="width:50%"></div></div>
-</div>
-
-<div class="skill">Communication
-<div class="bar"><div class="fill" style="width:80%"></div></div>
-</div>
-
-</section>
-
-<section id="projects">
+<p><b>Higher Secondary</b><br>
+Saratha Matric Hr Sec School<br>
+2021-2023<br>
+Percentage: 91%
+</p>
 
 <h2>Project</h2>
 
-<div class="grid">
-
-<div class="card">
-
-<h3>Autogrip 6R</h3>
-
 <p>
-Arduino based 6-axis robotic gripper system capable of switching between suction
-gripper and mechanical clamp.
+<b>Autogrip 6R:</b> Arduino based 6-axis robotic gripper system.
+Robotic gripper system that operates using programmed commands and can switch
+between suction gripper and mechanical clamp.
 </p>
 
-</div>
+<h2>Responsibilities</h2>
+
+<ul>
+<li>NSS Design Head</li>
+<li>Class Representative (5th Sem)</li>
+<li>Organizer – CEG Tech Forum</li>
+<li>Coordinator – Society of Mechanical Engineering</li>
+</ul>
+
+<h2>Achievements</h2>
+
+<ul>
+<li>Best Volunteer Award – NSS (2023–2024)</li>
+<li>1st Place – Intra College Dance Competition</li>
+<li>2nd Place – Inter Varieti Competition (Kilpauk Medical College)</li>
+<li>Winner – Badminton Intra Department Sports Meet</li>
+</ul>
 
 </div>
 
-</section>
-
-<section id="contact">
-
-<h2>Contact</h2>
-
-<div class="contact">
-
-<p>📞 +91 6380057019</p>
-
-<p>📧 mowbee22@gmail.com</p>
-
-<p>📍 Tamil Nadu, India</p>
-
 </div>
 
-</section>
-
-<footer>
-
-<p>© 2026 Mowbarnikaa</p>
-
-</footer>
-
-<script>
-
-function mode(){
-
-document.body.classList.toggle("light")
-
-}
-
-</script>
+<div class="footer">
+© 2026 Mowbarnikaa A
+</div>
 
 </body>
-
 </html>
 
 
