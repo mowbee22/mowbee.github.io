@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,14 +16,34 @@ margin:0;
 padding:0;
 box-sizing:border-box;
 font-family:'Poppins',sans-serif;
+scroll-behavior:smooth;
 }
 
 body{
 background:#0f172a;
 color:white;
+transition:0.3s;
 }
 
-/* HEADER */
+.light{
+background:white;
+color:black;
+}
+
+nav{
+display:flex;
+justify-content:space-between;
+padding:20px 10%;
+background:#020617;
+position:sticky;
+top:0;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 10px;
+}
 
 header{
 height:100vh;
@@ -33,70 +54,46 @@ align-items:center;
 text-align:center;
 }
 
+header img{
+width:140px;
+border-radius:50%;
+margin-bottom:20px;
+}
+
 header h1{
-font-size:50px;
+font-size:45px;
 color:#38bdf8;
 }
 
-header p{
-margin-top:10px;
-font-size:20px;
-}
-
 .btn{
-margin-top:25px;
+margin-top:20px;
 padding:10px 20px;
 background:#38bdf8;
-color:black;
 border:none;
-border-radius:5px;
 cursor:pointer;
+border-radius:5px;
 }
-
-/* SECTION */
 
 section{
 padding:60px 10%;
 }
 
 h2{
-margin-bottom:25px;
+margin-bottom:20px;
 border-left:4px solid #38bdf8;
 padding-left:10px;
 }
 
-/* GRID */
-
 .grid{
 display:grid;
 grid-template-columns:1fr 1fr;
-gap:40px;
+gap:30px;
 }
-
-/* SKILLS */
-
-.skill{
-margin-bottom:15px;
-}
-
-.bar{
-background:#1e293b;
-height:8px;
-border-radius:5px;
-}
-
-.fill{
-background:#38bdf8;
-height:8px;
-border-radius:5px;
-}
-
-/* CARD */
 
 .card{
 background:#1e293b;
 padding:20px;
-border-radius:8px;
+border-radius:10px;
 transition:0.3s;
 }
 
@@ -104,13 +101,34 @@ transition:0.3s;
 transform:translateY(-5px);
 }
 
-/* FOOTER */
+.skill{
+margin:15px 0;
+}
+
+.bar{
+height:8px;
+background:#334155;
+border-radius:5px;
+}
+
+.fill{
+height:8px;
+background:#38bdf8;
+border-radius:5px;
+}
+
+.contact p{
+margin:8px 0;
+}
 
 footer{
 text-align:center;
 padding:20px;
 background:#020617;
-margin-top:40px;
+}
+
+.toggle{
+cursor:pointer;
 }
 
 @media(max-width:768px){
@@ -120,23 +138,41 @@ grid-template-columns:1fr;
 }
 
 header h1{
-font-size:35px;
+font-size:32px;
 }
 
 }
 
 </style>
+
 </head>
 
 <body>
 
+<nav>
+
+<div><b>Mowbarnikaa</b></div>
+
+<div>
+<a href="#about">About</a>
+<a href="#skills">Skills</a>
+<a href="#projects">Projects</a>
+<a href="#contact">Contact</a>
+<span class="toggle" onclick="mode()">🌙</span>
+</div>
+
+</nav>
+
 <header>
 
+<img src="profile.jpg">
+
 <h1>Mowbarnikaa A</h1>
+
 <p>Mechanical Engineering Student</p>
 
-<a href="#about">
-<button class="btn">Explore Portfolio</button>
+<a href="resume.pdf" download>
+<button class="btn">Download Resume</button>
 </a>
 
 </header>
@@ -152,98 +188,79 @@ leadership and innovative engineering solutions.
 
 </section>
 
-<section>
-
-<h2>Education</h2>
-
-<div class="card">
-
-<h3>Bachelor of Engineering</h3>
-
-<p>College of Engineering Guindy – Anna University</p>
-<p>2023 – Present</p>
-<p>CGPA: 7.68 / 10</p>
-
-</div>
-
-<br>
-
-<div class="card">
-
-<h3>Higher Secondary</h3>
-
-<p>Saratha Matric Hr Sec School</p>
-<p>2021 – 2023</p>
-<p>Percentage: 91%</p>
-
-</div>
-
-</section>
-
-<section>
+<section id="skills">
 
 <h2>Skills</h2>
 
-<div class="skill">
-AutoCAD
-<div class="bar">
-<div class="fill" style="width:70%"></div>
-</div>
+<div class="skill">AutoCAD
+<div class="bar"><div class="fill" style="width:70%"></div></div>
 </div>
 
-<div class="skill">
-Creo
-<div class="bar">
-<div class="fill" style="width:50%"></div>
-</div>
+<div class="skill">Creo
+<div class="bar"><div class="fill" style="width:50%"></div></div>
 </div>
 
-<div class="skill">
-Communication
-<div class="bar">
-<div class="fill" style="width:80%"></div>
-</div>
+<div class="skill">Communication
+<div class="bar"><div class="fill" style="width:80%"></div></div>
 </div>
 
 </section>
 
-<section>
+<section id="projects">
 
 <h2>Project</h2>
+
+<div class="grid">
 
 <div class="card">
 
 <h3>Autogrip 6R</h3>
 
 <p>
-Arduino based 6-Axis robotic gripper system that operates through programmed commands
-and switches between suction gripper and mechanical clamp.
+Arduino based 6-axis robotic gripper system capable of switching between suction
+gripper and mechanical clamp.
 </p>
+
+</div>
 
 </div>
 
 </section>
 
-<section>
+<section id="contact">
 
-<h2>Achievements</h2>
+<h2>Contact</h2>
 
-<ul>
+<div class="contact">
 
-<li>Best Volunteer Award – NSS (2023–2024)</li>
-<li>1st Place – Intra College Dance Competition</li>
-<li>2nd Place – Inter Variety Competition (Kilpauk Medical College)</li>
-<li>Winner – Badminton Intra Department Sports Meet</li>
+<p>📞 +91 6380057019</p>
 
-</ul>
+<p>📧 mowbee22@gmail.com</p>
+
+<p>📍 Tamil Nadu, India</p>
+
+</div>
 
 </section>
 
 <footer>
 
-<p>© 2026 Mowbarnikaa A</p>
+<p>© 2026 Mowbarnikaa</p>
 
 </footer>
 
+<script>
+
+function mode(){
+
+document.body.classList.toggle("light")
+
+}
+
+</script>
+
 </body>
+
 </html>
+
+
